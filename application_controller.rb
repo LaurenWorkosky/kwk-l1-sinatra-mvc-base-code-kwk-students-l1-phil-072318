@@ -4,14 +4,21 @@ Bundler.require
 
 class MyApp < Sinatra::Base
   get '/' do
-    "This is your home page"
+    "Welcome to Lauren's website. /pictures for pictures. /lauren for fun facts. /hello/:name for a fun surprise and /survey for a food survey. /"
   end
   
-  get '/hello' do
-    "hello everyone, I hope you are having a great day. I hope you drink lots of water and sleep well tonight. Ok bye!"
-  end
-  
-  get '/itslit' do
+  get '/' do
     erb:index
   end
+  
+  get '/food' do
+    erb:food
+  end
+  
+  get '/fitness' do
+    erb:fitness
+  end
+  
+
+
 end
